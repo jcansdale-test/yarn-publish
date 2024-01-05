@@ -19,6 +19,8 @@ jobs:
           scope: ${{ github.repository_owner }}
           registry-url: https://npm.pkg.github.com
 
+      - run: yarn config list --verbose
+
       - name: Create a package called @${{ github.repository }}
         run: npm init --scope ${{ github.repository_owner }} -y
 
